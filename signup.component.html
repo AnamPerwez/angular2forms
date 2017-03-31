@@ -1,0 +1,37 @@
+<form [formGroup]="myform"
+>
+  <label>
+    <span>Full name</span>
+    <input
+      type="text"
+      name="name"
+      placeholder="Your full name" [formControl]="myform.controls['name']">
+  </label>
+  
+    <label>
+      <span>Email address</span>
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email address" [formControl]="myform.controls['email']">
+    </label>
+    <div>
+
+      <label>
+        <span>Password</span>
+      <input 
+      type ="password"
+       name="pwd"
+        placeholder="password" [formControl]="myform.controls['pwd']">
+      </label>
+
+    <label>
+      <span>Confirm password</span>
+      <input
+        type="password"
+        name="confirm_pwd"
+        placeholder="Confirm your password" [formControl]="myform.controls['confirm_pwd']">
+    </label>
+  </div>
+  <button type="submit" (click)="submit(myform.value)" >Sign up</button>
+</form>

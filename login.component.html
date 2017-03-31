@@ -1,0 +1,20 @@
+<form [formGroup]="loginform">
+
+    <label>
+      <span>Email address</span>
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email address" [formControl]="loginform.controls['email']">
+    </label>
+    
+
+      <label>
+        <span>Password</span>
+      <input 
+      type ="password"
+       name="pwd"
+        placeholder="password" [formControl]="loginform.controls['pwd']">
+      </label>
+       <button type="submit" (click)="submit(loginform.value)" >Login</button>
+</form>
